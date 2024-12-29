@@ -1,0 +1,6 @@
+@Mauve.API_HostAddress = http://localhost:5010
+
+GET {{Mauve.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

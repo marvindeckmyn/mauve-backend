@@ -1,0 +1,36 @@
+## .NET Core
+bin/
+obj/
+*.user
+*.userosscache
+*.suo
+*.userprefs
+.vs/
+.vscode/
+*.swp
+*.swo
+
+## Angular
+/ClientApp/dist
+/ClientApp/node_modules
+/ClientApp/.angular/cache
+/ClientApp/npm-debug.log
+/ClientApp/yarn-error.log
+
+## Environment Files
+appsettings.Development.json
+appsettings.Production.json
+.env
+
+## Database
+*.mdf
+*.ldf
+*.ndf
+
+## IDE
+.idea/
+*.sln.iml
+
+## OS Files
+.DS_Store
+Thumbs.db
