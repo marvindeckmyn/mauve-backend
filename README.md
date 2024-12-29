@@ -50,8 +50,8 @@ MauveSupply/
 
 1. Clone the repository
 ```bash
-git clone https://github.com/marvindeckmyn/mauve-supply.git
-cd mauve-supply
+git clone https://github.com/marvindeckmyn/mauve-backend.git
+cd mauve-backend
 ```
 
 2. Install dependencies
