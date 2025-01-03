@@ -60,7 +60,7 @@ public class ProductsController : ControllerBase
             product.UpdatedAt = DateTime.UtcNow;
 
             var createdProduct = await _productRepository.AddAsync(product);
-            await _unitOfWork.Complete();
+            await _unitOfWork.CompleteAsync();
 
             return CreatedAtAction(nameof(GetProduct), new { id = createdProduct.Id }, createdProduct);
         }
@@ -89,7 +89,7 @@ public class ProductsController : ControllerBase
             product.CreatedAt = existingProduct.CreatedAt; // Prereserve original creation date
 
             await _productRepository.UpdateAsync(product);
-            await _unitOfWork.Complete();
+            await _unitOfWork.CompleteAsync();
 
             return NoContent();
         }
@@ -112,7 +112,7 @@ public class ProductsController : ControllerBase
             product.UpdatedAt = DateTime.UtcNow;
 
             await _productRepository.UpdateAsync(product);
-            await _unitOfWork.Complete();
+            await _unitOfWork.CompleteAsync();
 
             return NoContent();
         }
@@ -132,7 +132,7 @@ public class ProductsController : ControllerBase
                 return NotFound($"Product with ID {id} not found");
 
             await _productRepository.DeleteAsync(product);
-            await _unitOfWork.Complete();
+            await _unitOfWork.CompleteAsync();
 
             return NoContent();
         }
